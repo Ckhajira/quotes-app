@@ -1,7 +1,7 @@
 export class Quote {
     detailedExpand;
 
-    constructor(){
+    constructor(id:number, title:string, quote:string,author:string, datePosted:Date ){
         this.detailedExpand=false;
     }
 }
