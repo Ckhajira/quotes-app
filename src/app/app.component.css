@@ -8,10 +8,13 @@
 .full-screen h1 {
   padding-top: 2%;
   padding-bottom: 1%;
+  font-size: 2rem;
 }
 .logo{
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #35f2ff, #ffeb35);
   display: flex;
-  height: 100px;
+  height: 70px;
   justify-content: center;
   align-items: center;
 }
