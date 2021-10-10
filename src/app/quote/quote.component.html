@@ -6,7 +6,7 @@
         <p class="card-title text-white">{{defaultQuote.title}}</p>
         <i class="fas fa-quote-left fa-3x"></i>
         <p class="card-text text-white">{{defaultQuote.quote}}</p>
-        <button (click)='showAuthor(i)' class="btn btn-info">More...</button><br><br>
+        <button (click)='showAuthor(i)' class="btn btn-info">Quote Info</button><br><br>
         <app-quote-info *ngIf='myQuote.moreDetails' [quote]='myQuote' (toDelete)='removeQuote($event,i)'>
         </app-quote-info>
       </div>

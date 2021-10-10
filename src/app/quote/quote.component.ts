@@ -16,6 +16,10 @@ export class QuoteComponent implements OnInit {
     new Quote(1, "Political quote", "We will fight on land, in the sea and on air", "Churchill", new Date(2021, 10, undefined, 18, 44
     ))
   ];
+
+  showAuthor(index){
+    this.defaultQuotes[index].moreDetails = !this.defaultQuotes[index].moreDetails;
+  }
   constructor() { }
 
   ngOnInit(): void {
