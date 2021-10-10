@@ -17,18 +17,25 @@ export class QuoteComponent implements OnInit {
     ))
   ];
 
-  showAuthor(index) {
+  showAuthor(index:any) {
     this.defaultQuotes[index].moreDetails = !this.defaultQuotes[index].moreDetails;
   }
 
-  removeQuote(toDelete, index) {
+  removeQuote(toDelete:any, index:any) {
     if (toDelete) {
       let confirmDelete = confirm('Are you sure you want to delete this quote?');
 
       if (confirmDelete) {
-        this.myQuotes.splice(index, 1);
+        this.defaultQuotes.splice(index, 1);
       }
     }
+  }
+
+  addNewQuote(defaultQuote:any) {
+    let defaultQuoteLength = this.defaultQuotes.length;
+    defaultQuote.id = defaultQuoteLength + 1;
+    defaultQuote.datePosted = new Date();
+    this.defaultQuotes.push(defaultQuote)
   }
 
   constructor() { }
