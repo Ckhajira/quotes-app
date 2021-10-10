@@ -7,40 +7,35 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  myQuotes:Quote[] = [
+    new Quote(1, 'Leadership Quote', 'You must be the change you wish to see in the world','Mahatma Gandhi',new Date(2021,9,11)),
+    new Quote(2, 'Technology Quote', 'If you are trying to build a company, it is like baking a cake. All ingredients have to be in proportion','Elon Musk',new Date(2021,9,10)),
+    
+    
 
-  defaultQuotes: Quote[] = [
-    new Quote(1, "Energy quote", "We are the champions", "Freddy Mercury", new Date(2021, 10, undefined, 16, 44
-    )),
-    new Quote(1, "Inspirational quote", "Yes we can", "Barack Obama", new Date(2021, 10, undefined, 14, 44
-    )),
-    new Quote(1, "Political quote", "We will fight on land, in the sea and on air", "Churchill", new Date(2021, 10, undefined, 18, 44
-    ))
   ];
+showAuthor(index){
+  this.myQuotes[index].moreDetails = !this.myQuotes[index].moreDetails;
+}
+removeQuote(toDelete,index){
+  if(toDelete){
+    let confirmDelete = confirm('Are you sure you want to delete this quote?');
 
-  showAuthor(index:any) {
-    this.defaultQuotes[index].moreDetails = !this.defaultQuotes[index].moreDetails;
+  if(confirmDelete){
+    this.myQuotes.splice(index,1);
   }
+}
+}
 
-  removeQuote(toDelete:any, index:any) {
-    if (toDelete) {
-      let confirmDelete = confirm('Are you sure you want to delete this quote?');
-
-      if (confirmDelete) {
-        this.defaultQuotes.splice(index, 1);
-      }
-    }
-  }
-
-  addNewQuote(defaultQuote:any) {
-    let defaultQuoteLength = this.defaultQuotes.length;
-    defaultQuote.id = defaultQuoteLength + 1;
-    defaultQuote.datePosted = new Date();
-    this.defaultQuotes.push(defaultQuote)
-  }
-
+addNewQuote(myQuote){
+  let myQuoteLength = this.myQuotes.length;
+  myQuote.id = myQuoteLength + 1;
+  myQuote.datePosted = new Date();
+  this.myQuotes.push(myQuote)
+}
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }

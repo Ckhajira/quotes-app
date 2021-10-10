@@ -1,9 +1,9 @@
-<div class="text-white">
-  <p class="text-white author">~ {{quote.author}}</p>
+<div class="text-black">
+   <p class="text-black author">~ {{quote.author}}</p>
 
-  <i (click)='likeButtonClick()' class="fas fa-thumbs-up fa-2x thumb-up"></i>
-  {{numberOfLikes}}
-  <i (click)='dislikeButtonClick()' class="fas fa-thumbs-down fa-2x thumb-down"></i>
+  <span class="like-btn"><i (click)='likeButtonClick()' class="fas fa-thumbs-up fa-2x thumb-up"></i></span>
+ <span class="like" >{{numberOfLikes}}</span>
+    <i (click)='dislikeButtonClick()' class="fas fa-thumbs-down fa-2x thumb-down"></i>
   {{numberOfDislikes}} &nbsp;&nbsp;&nbsp;{{quote.datePosted|dayCount}}
-  <br><br><button (click)='deleteQuote(true)' class="btn btn-outline-danger">Delete Me</button>
+  <br><br><button (click)= 'deleteQuote(true)' class="btn btn-danger">Delete</button>
 </div>

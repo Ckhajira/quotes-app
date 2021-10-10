@@ -1,7 +1,8 @@
 export class Quote {
-    moreDetails:boolean;
+  moreDetails: boolean;
 
-    constructor(id:number, title:string, quote:string,author:string, datePosted:Date ){
-        this.moreDetails=false;
-    }
+  constructor(public id: number, public title: string,public quote: string, public author:string,public datePosted: Date){
+      this.moreDetails=false;
+  }
+
 }

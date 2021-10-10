@@ -13,6 +13,7 @@ newQuote = new Quote (0,"","","",new Date())
 
 submitQuote(){
   this.addQuote.emit(this.newQuote);
+  
 }
   constructor() { }
 

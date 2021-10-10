@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -8,20 +8,20 @@ import { Quote } from '../quote';
 })
 export class QuoteInfoComponent implements OnInit {
 
-  @Input() quote: Quote;
-  @Output() toDelete = new EventEmitter<boolean>();
+@Input() quote: Quote;
+@Output() toDelete = new EventEmitter<boolean>();
 
-  deleteQuote(remove: boolean) {
-    this.toDelete.emit(remove);
-  }
-  numberOfLikes: number = 0;
-  numberOfDislikes: number = 0;
-  likeButtonClick() {
-    this.numberOfLikes++;
-  }
-  dislikeButtonClick() {
-    this.numberOfDislikes++;
-  }
+deleteQuote(remove:boolean){
+  this.toDelete.emit(remove);
+}
+numberOfLikes : number = 0;
+numberOfDislikes: number = 0;
+likeButtonClick() {
+  this.numberOfLikes++;
+}
+dislikeButtonClick(){
+  this.numberOfDislikes++;
+}
 
 
 

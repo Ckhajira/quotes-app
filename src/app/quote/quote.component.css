@@ -1,0 +1,22 @@
+.card {
+  max-height: fit-content;
+  width: 500px;
+  margin-left: 60px;
+  margin-bottom: 10px;
+  border-bottom-right-radius: 30%;
+  border: none;
+  color: black;
+
+}
+
+.card-body {
+  border: none;
+  background: linear-gradient(to left, #00aaff, #00ff6a);
+  color: black;
+  border-bottom-right-radius: 30%;
+  
+}
+
+.card-title {
+  font-size: 20px;
+}

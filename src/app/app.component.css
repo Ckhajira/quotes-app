@@ -1,0 +1,17 @@
+.full-screen {
+  background: linear-gradient(to right, #00AAFF, #00FF6C);
+  width: 99vw;
+  min-height: 100vh;
+  
+}
+
+.full-screen h1 {
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+.logo{
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}

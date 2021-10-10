@@ -1,0 +1,26 @@
+
+.container{
+  background: linear-gradient(to left, #00aaff, #00ff6a);
+padding-top: 30px;
+padding-bottom:30px
+
+}
+input[type=text],textarea{
+  border:1px solid #00BFFF;
+}
+form input{
+  width: 300px;
+  margin-left: 50px;
+}
+textarea{
+  width: 300px;
+  margin-left: 50px;
+}
+.button-custom{
+  width: 300px;
+  margin-left: 50px;
+}
+.alert{
+  width: 300px;
+  margin-left: 50px;
+}
